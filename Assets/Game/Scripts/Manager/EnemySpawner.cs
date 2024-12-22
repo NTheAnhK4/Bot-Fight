@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SpawnManager : Singleton<SpawnManager>
+public class EnemySpawner : Singleton<EnemySpawner>
 {
     public BotData botData;
     public Transform holder;
