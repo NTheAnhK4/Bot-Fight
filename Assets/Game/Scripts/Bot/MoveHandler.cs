@@ -11,14 +11,15 @@ public class MoveHandler : ChildBehavior
     [SerializeField] private Vector3 direction;
     [SerializeField] private float speed;
     [SerializeField] private float weight;
-    protected override void LoadComponent()
+
+    public void Init(Vector3 direct, float moveSpeed, float weightActor)
     {
-        base.LoadComponent();
-        speed = 1;
-        weight = 2;
-        direction = Vector3.right;
+        this.direction = direct;
+        this.speed = moveSpeed;
+        this.weight = weightActor;
         LoadRigid();
     }
+    
 
     protected void LoadRigid()
     {
@@ -31,6 +32,7 @@ public class MoveHandler : ChildBehavior
 
     private void Update(){
         rb.AddForce(speed * direction,ForceMode2D.Force);
+        rb.velocity = Vector2.ClampMagnitude(rb.velocity, speed);
     }
 
    
