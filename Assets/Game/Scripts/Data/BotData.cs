@@ -14,5 +14,6 @@ public class BotParam
     public string botName;
     public float weight;
     public float speed;
+    public float damage;
     public Transform botPrefab;
 }
