@@ -35,8 +35,8 @@ public class SpawnManager : Singleton<SpawnManager>
         int index = Random.Range(0, botData.data.Count);
         Transform prefab = botData.data[index].botPrefab;
         GameObject enemy = PoolingManager.Spawn(prefab.gameObject, GetRandPos(),default,holder);
-        MoveHandler enemyMove = enemy.GetComponent<MoveHandler>();
-        enemyMove.Init(Vector3.left,botData.data[index].speed,botData.data[index].weight);
+        ActorCtrl actorCtrl = enemy.GetComponent<ActorCtrl>();
+        actorCtrl.Init(Vector3.left,botData.data[index].speed,botData.data[index].weight);
     }
 
     private void Update()
