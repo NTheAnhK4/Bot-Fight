@@ -27,7 +27,7 @@ public class SpawnManager : Singleton<SpawnManager>
     private Vector3 GetRandPos()
     {
         int row = Random.Range(0, 5);
-        Vector3 pos = new Vector3(16, 2.5f * row - 3.5f, 0);
+        Vector3 pos = new Vector3(10, 2.5f * row - 3.5f, 0);
         return pos;
     }
     private void Spawn()
@@ -36,7 +36,7 @@ public class SpawnManager : Singleton<SpawnManager>
         Transform prefab = botData.data[index].botPrefab;
         GameObject enemy = PoolingManager.Spawn(prefab.gameObject, GetRandPos(),default,holder);
         ActorCtrl actorCtrl = enemy.GetComponent<ActorCtrl>();
-        actorCtrl.Init(Vector3.left,botData.data[index].speed,botData.data[index].weight);
+        actorCtrl.Init(Vector3.left,botData.data[index].speed,botData.data[index].weight,botData.data[index].damage);
     }
 
     private void Update()
