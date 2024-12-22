@@ -23,3 +23,8 @@ MonoBehaviour:
     speed: 1.5
     damage: 1
     botPrefab: {fileID: 7693404490854444712, guid: 9e6dbf5e824a3ca48b18c995fee7620c, type: 3}
+  - botName: Bulldozer
+    weight: 5
+    speed: 2
+    damage: 1
+    botPrefab: {fileID: 3950476300294260202, guid: 853a0216dba579243997fe1cb7e54a88, type: 3}

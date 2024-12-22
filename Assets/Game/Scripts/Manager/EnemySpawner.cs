@@ -27,7 +27,7 @@ public class EnemySpawner : Singleton<EnemySpawner>
     private Vector3 GetRandPos()
     {
         int row = Random.Range(0, 5);
-        Vector3 pos = new Vector3(10, 2.5f * row - 3.5f, 0);
+        Vector3 pos = new Vector3(10, 2.375f * row - 2.5f, 0);
         return pos;
     }
     private void Spawn()
