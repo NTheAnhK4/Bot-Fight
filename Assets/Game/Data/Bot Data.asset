@@ -16,8 +16,10 @@ MonoBehaviour:
   - botName: BotTest
     weight: 1
     speed: 1
-    botPrefab: {fileID: 4324253031944718338, guid: 3989fc8d23bdd884b80884937ca57b80, type: 3}
+    damage: 2
+    botPrefab: {fileID: 216797605058455831, guid: 3989fc8d23bdd884b80884937ca57b80, type: 3}
   - botName: Base Bot
     weight: 2
     speed: 1.5
-    botPrefab: {fileID: 7572815688417287472, guid: 9e6dbf5e824a3ca48b18c995fee7620c, type: 3}
+    damage: 1
+    botPrefab: {fileID: 7693404490854444712, guid: 9e6dbf5e824a3ca48b18c995fee7620c, type: 3}
